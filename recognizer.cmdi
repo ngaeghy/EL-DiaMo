@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Anything outside of the RECOGNIZER element can be left untouched -->
+<CMD CMDVersion="1.1" xmlns="http://www.clarin.eu/cmd/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.clarin.eu/cmd/ http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1430905751617/xsd">
+    <!-- See http://catalog.clarin.eu/ds/ComponentRegistry?registrySpace=published&itemId=clarin.eu:cr1:p_1430905751617 -->
+    <Header></Header>
+    <Resources>
+        <ResourceProxyList></ResourceProxyList>
+        <JournalFileProxyList></JournalFileProxyList>
+        <ResourceRelationList></ResourceRelationList>
+    </Resources>
+    <Components>
+        <RECOGNIZER>
+            <recognizer recognizerType="local" runLinux="./streamlined_diar.sh" runMac="./streamlined_diar.sh" runWin=""
+                    info="STREAMLInED Diarization">streamlined_diar</recognizer>
+            
+            <input level="basic" type="audio" optional="false"
+                    mimetypes="audio/x-wav" info="Input file (WAV)">source</input>
+            
+            <textparam convoc="pyannote VBx Kaldi"
+                    default="pyannote" level="basic" info="Diarization model">
+                backend_service</textparam>
+            <textparam level="basic" 
+                info="Hugging Face Access Token">hf_access_token</textparam>
+            
+            <textparam convoc="Unsupervised Supervised" default="Unsupervised" level="basic" info="Supervision option">supervision</textparam>
+            <textparam default="-1" level="basic" 
+                info="Minimum number of speakers (if supervised)">min_speakers</textparam>
+            <textparam default="-1" level="basic" 
+                info="Maximum number of speakers (if supervised)">max_speakers</textparam>
+
+            <output level="basic" type="tier" optional="false"
+                    mimetypes="text/xml"
+                    info="Output tier">output_tier</output>
+
+        </RECOGNIZER>
+    </Components>
+</CMD>
