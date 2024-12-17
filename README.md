@@ -26,7 +26,7 @@ ELAN Integration for speaker diarization models
 ***\*Only tested with Python 3.10, ELAN 6.8, on MacOS 14.6\****
 
 ## Acknowledgements
-Part of the code is built on top of the work by Sam Michel. The code also draws inspiration from the many ELAN recognizers written by Christopher Cox. Additionally, thanks to Prof Gina-Anne Levow for the directions and advices to the task.
+Part of the code is built on top of the work by Sam Michels. The code also draws inspiration from the many ELAN recognizers written by Christopher Cox. Additionally, thanks to Prof Gina-Anne Levow for the directions and advices on the task.
 
 ## Contact
 Ghau Yan Ngae - ngaeghy [at] uw [dot] edu
