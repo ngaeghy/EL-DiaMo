@@ -1,4 +1,4 @@
-# ELAN-Diar
+# EL-DiaMo
 ELAN Integration for speaker diarization models
 
 ## Prerequisites
